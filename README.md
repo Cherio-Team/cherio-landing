@@ -1,14 +1,5 @@
 # * Cherio Landing Page
-We would like to thank you for purchasing Attex :). The following guideline will help you to get started with the hyper and its documentation.
-
-#### Docs and Examples
-
-The `docs` directory contains all the static resources required for docs and examples. To view, just open in your favorite browser!
-
-```
-$ open docs/index.html
-```
-Once you open the documentation. Just click on `Getting Started` link from left, this would open up the page (`docs/getting-started.html`) containing instructions to get started with setup. Optionally, you can review quick setup guide described below.
+Cherio landing page with details on what we do.
 
 #### Gulp
 
