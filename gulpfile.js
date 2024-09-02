@@ -15,6 +15,8 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require("autoprefixer");
 const gulpautoprefixer = require("gulp-autoprefixer");
 const tailwindcss = require('tailwindcss');
+var gulp        = require('gulp');
+var deploy      = require('gulp-gh-pages');
 
 const paths = {
     baseSrc: "src/",                         // source directory
@@ -179,6 +181,14 @@ function watchFiles() {
         "!" + paths.baseSrcAssets + "scss/icons.scss",
         "!" + paths.baseSrcAssets + "scss/icons/*.scss"], series(style, reloadBrowserSync));
 }
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', function () {
+    return gulp.src("./dist/**/*")
+      .pipe(deploy())
+  });
 
 // Producaton Tasks
 exports.default = series(
